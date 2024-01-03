@@ -1,0 +1,334 @@
+a {
+  color: #fff;
+  text-decoration: none;
+}
+.me {
+  width: 200px;
+  bottom: 10px;
+  right: 10px;
+  position: fixed;
+  text-align: right;
+}
+
+.me p,
+.me h1 {
+  letter-spacing: 3px;
+  text-align: center;
+  font-size: 16px;
+ 
+  
+}
+
+
+.me p {
+  font-weight: 10px;
+ 
+}
+.me span {
+  font-weight: bold;
+}
+.social {
+  position: fixed;
+  top: 200px;
+}
+.social ul {
+  padding: 0px;
+  transform: translate(-270px, 0);
+}
+.social ul li {
+  display: block;
+  margin: 5px;
+  background: rgba(0, 0, 0, 0.36);
+  width: 300px;
+  text-align: right;
+  padding: 10px;
+  border-radius: 0 30px 30px 0;
+  transition: all 1s;
+}
+.social ul li:hover {
+  transform: translate(110px, 0);
+  background: rgba(255, 255, 255, 0.4);
+}
+.social ul li:hover a {
+  color: #000;
+}
+.social ul li:hover i {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.36);
+  transform: rotate(360deg);
+  transition: all 1s;
+}
+.social ul li i {
+  margin-left: 10px;
+  color: #000;
+  background: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  background: #ffffff;
+  transform: rotate(0deg);
+}
+
+body {
+  background: #4F8B89;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+}
+footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  
+  
+  
+}
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700; /* Dodajte željenu debljinu fonta */
+}
+
+body {
+  background: #000;
+}
+
+.stage {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+}
+
+.actor {
+  animation: kenburns 30s linear infinite;
+  background-size: cover;
+  background-position: 50%;
+  height: 100vh;
+  inset: 0;
+  opacity: 0;
+  position: absolute;
+  scale: 1.2;
+  width: 100vw;
+  position:fixed;
+}
+
+.actor:nth-child(1) {
+  background-image: url("https://assets-global.website-files.com/634e928d7acf0e5b9297c41b/637f77288de2a367b72c0aa6_60acc39943fb25e3c38e0226_live%2520social%2520chat-p-1600.jpeg");
+}
+.actor:nth-child(2) {
+  animation-delay: 10s;
+  background-image: url("https://myinstantmessaging.com/wp-content/uploads/2015/06/icons-1445475_1920.jpg");
+}
+.actor:nth-child(3) {
+  animation-delay: 20s;
+  background-image: url("https://codecondo.com/wp-content/uploads/2015/03/Instant-Messaging-Solutions-for-Programmers.jpg");
+}
+
+@keyframes kenburns {
+  25% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .8;
+    scale: 1;
+  }
+
+  60% {
+    opacity: 0;
+  }
+}
+
+h1 {
+  position: fixed;
+  top: 0%;
+ 
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  margin-top: 5px;
+  text-align:center;
+  font-style:inherit;
+  font-size: 20px;
+  color: #fbfbfb;
+  align-content: center;
+  border-radius: 7px;
+  
+}
+#clock {
+  font-family: 'Share Tech Mono', monospace;
+  color: #ffffff;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#clock .time {
+  letter-spacing: 0.05em;
+  font-size: 80px;
+  padding: 5px 0;
+}
+
+#clock .date {
+  letter-spacing: 0.1em;
+  font-size: 24px;
+}
+
+#clock .text {
+  letter-spacing: 0.1em;
+  font-size: 12px;
+  padding: 20px 0 0;
+  /* Dodatni stilovi */
+}
+
+.text-input {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 300px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column; /* Postavljanje elemenata u kolonu */
+  align-items: center;
+ 
+}
+
+.text-input textarea {
+  width: calc(100% - 20px); /* Širina - 20px zbog paddinga */
+  height: calc(100% - 20px); /* Visina - 20px zbog paddinga */
+  border: none;
+  resize: none;
+  outline: none;
+  font-family: Arial, sans-serif; /* Možete promijeniti font prema želji */
+  font-size: 20px;
+}
+  
+
+
+.button-33 {
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 17px;
+  margin-left: 310px;
+  margin-bottom: 5px;
+  
+}
+
+.button-33:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+
+#emoji{
+
+  margin-top: -40px;
+  margin-left: 10px
+}
+.button-container {
+  margin-top: 90px; /* Prilagodite margine prema potrebi */
+  display: flex;
+  flex-direction: column; /* Postavljanje elemenata u kolonu */
+  align-items: flex-start; /* Poravnaj elemente po horizontali */
+  margin-bottom: -50px;
+  margin-right: 5px;
+}
+.emoji-list {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  margin-top: 45px;
+}
+
+.emoji-list button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 5px;
+  margin: 3px;
+}
+
+
+
+
+
+.navbar {
+  background-color: #ffffff; /* Boja pozadine trake */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Senka */
+}
+
+.navbar-brand img {
+  width: 120px; /* Veličina logotipa */
+  height: auto;
+}
+
+.nav-link {
+  color: #000000; /* Boja linkova */
+  font-weight: 500; /* Debljina fonta */
+  margin-right: 20px; /* Razmak između linkova */
+  transition: color 0.3s ease; /* Animacija promjene boje */
+}
+
+.nav-link:hover {
+  color: #ff6600; /* Boja linka na hover */
+}
+
+/* Stiliziranje search inputa */
+.search_input {
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: 8px 12px;
+  width: 200px; /* Širina inputa */
+}
+
+.search_img {
+  right: 10px; /* Pozicioniranje ikone pretraživanja */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Stilizacija navbar toggle ikone */
+.navbar-toggler {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+.navbar-toggler-icon {
+  width: 24px; /* Veličina ikone */
+  height: auto;
+  color: #000000; /* Boja ikone */
+}
+
+.navbar-toggler:hover .navbar-toggler-icon {
+  color: #ff6600; /* Boja ikone na hover */
+}

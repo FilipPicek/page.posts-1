@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/main.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script src="https://cdn.commoninja.com/sdk/latest/commonninja.js" defer></script>
+  <div class="commonninja_component pid-85ad23e6-f956-4d3a-8dfc-926304e177cd"></div>
+  
+  <title>Make a post</title>
+</head>
+
+
+
+<body>
+  
+
+  
+  
+
+  
+    <main>
+      <div class="stage">
+        <div class="actor"></div>
+            <div class="actor"></div>
+            <div class="actor"></div>
+            
+
+           
+
+
+          
+      <h1>You can sign in, create your own post, and read posts with music in the background.</h1>
+      <h2></h2>
+      <h3></h3>
+      </div>
+     
+      
+        
+      <div class="context">
+        <nav class="social">
+          <ul>
+            <li><a href="https://twitter.com">Twitter <i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://pinterest.com">Pinterest <i class="fa fa-pinterest"></i></a></li>
+            <li><a href="https://www.linkedin.com">Linkedin <i class="fa fa-linkedin"></i></a></li>
+            <li><a href="https://www.instagram.com">Instagram <i class="fa fa-instagram"></i></a></li>
+            <li><a href="https://www.youtube.com">Youtube <i class="fa fa-youtube"></i></a></li>
+            <li><a href="https://www.wechat.com">WeChat <i class="fa fa-wechat"></i></a></li>
+            <li><a href="https://www.tumblr.com">Tumblr <i class="fa fa-tumblr"></i></a></li>
+            
+          </ul>
+        </nav>
+        
+      </div>
+      
+      <div class="text-input">
+        <textarea id="myInput" placeholder="Enter text here"></textarea>
+        <div class="button-container">
+          <button id="copyButton" class="button-33" role="button">Copy</button>
+          <button id="emoji" class="button-33" role="button">Emoji</button>
+        </div>
+      </div>
+      <div id="emojiList" class="emoji-list"></div>
+
+     
+  
+        
+
+      
+     
+ 
+      <%- include("partials/footer.ejs") %>
+      
+    </main>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var copyButton = document.getElementById("copyButton");
+      if (copyButton) {
+        copyButton.addEventListener("click", copyText);
+      }
+
+      function copyText() {
+        var input = document.getElementById("myInput");
+        input.select();
+        document.execCommand("copy");
+      }
+
+      const emojis = ["😀", "😂", "😍", "😎", "🤔", "😊", "🙌", "🎉", "👍", "❤️", "🌟", "🔥", "🚀", "🌈", "💡", "📚", "💻", "⚽", "🍔", "🎵"];
+      const emojiButton = document.getElementById("emoji");
+      const emojiList = document.getElementById("emojiList");
+
+      emojiButton.addEventListener("click", function() {
+        emojiList.innerHTML = ""; // Očistimo prije nego dodamo nove emojije
+
+        emojis.forEach(emoji => {
+          const emojiButton = document.createElement("button");
+          emojiButton.innerText = emoji;
+          emojiButton.addEventListener("click", function() {
+            const input = document.getElementById("myInput");
+            input.value += emoji;
+            emojiList.style.display = "none";
+          });
+          emojiList.appendChild(emojiButton);
+        });
+
+        // Pozicioniramo prozor s emojijima ispod buttona
+        const buttonPosition = emojiButton.getBoundingClientRect();
+        emojiList.style.top = `${buttonPosition.bottom}px`;
+        emojiList.style.left = `${buttonPosition.left}px`;
+
+        emojiList.style.display = "block";
+      });
+
+      document.addEventListener("click", function(e) {
+        if (e.target !== emojiButton && e.target.parentNode !== emojiList) {
+          emojiList.style.display = "none";
+        }
+      });
+    });
+  </script>
+
+
+  
+ 
+
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
