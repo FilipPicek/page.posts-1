@@ -40,7 +40,7 @@ app.get("/submit", (req, res) => {
   });
 
   app.get("/post", (req, res) => {
-    // Ovdje koristimo metodu `res.sendFile` da pošaljemo sadržaj iz 'posts.ejs'
+    
     res.render("posts.ejs");
 
   });
