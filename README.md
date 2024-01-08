@@ -1,0 +1,1 @@
+A page designed for creating posts for various social media platforms. In one place, you have a space for writing posts, quick access to the most popular social networks and an audio player with over 5 hours of diverse music for everyone to enjoy! Have fun!
